@@ -544,7 +544,7 @@ The **Crawler** automatically retrieves article links and metadata from governme
 2. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/hoangsonww/AI-Gov-Content-Curator.git
+   git clone https://github.com/MeAkash77/AI-Gov-Content-Curator.git
    cd AI-Gov-Content-Curator/crawler
    ```
 
@@ -670,7 +670,7 @@ The **Frontend** is built with Next.js and React, providing a modern, mobile-res
 2. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/hoangsonww/AI-Gov-Content-Curator.git
+   git clone https://github.com/MeAkash77/AI-Gov-Content-Curator.git
    cd AI-Gov-Content-Curator/frontend
    ```
 
