@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: "3000"
+      MONGODB_URI: "${MONGODB_URI}"
+      GOOGLE_AI_API_KEY: "${GOOGLE_AI_API_KEY}"
+      AI_INSTRUCTIONS: "${AI_INSTRUCTIONS}"
+      NEWS_API_KEY: "${NEWS_API_KEY}"
+      CRAWL_URLS: "${CRAWL_URLS}"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: "http://localhost:3000"
+    restart: unless-stopped
+
+  crawler:
+    build:
+      context: ./crawler
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3000"
+    environment:
+      PORT: "3000"
+      MONGODB_URI: "${MONGODB_URI}"
+      GOOGLE_AI_API_KEY: "${GOOGLE_AI_API_KEY}"
+      GOOGLE_AI_API_KEY1: "${GOOGLE_AI_API_KEY1}"
+      GOOGLE_AI_API_KEY2: "${GOOGLE_AI_API_KEY2}"
+      GOOGLE_AI_API_KEY3: "${GOOGLE_AI_API_KEY3}"
+      AI_INSTRUCTIONS: "${AI_INSTRUCTIONS}"
+      NEWS_API_KEY: "${NEWS_API_KEY}"
+      NEWS_API_KEY1: "${NEWS_API_KEY1}"
+      CRAWL_URLS: "${CRAWL_URLS}"
+    restart: unless-stopped
+
+  newsletters:
+    build:
+      context: ./newsletters
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3000"
+    environment:
+      PORT: "3000"
+      MONGODB_URI: "${MONGODB_URI}"
+      RESEND_API_KEY: "${RESEND_API_KEY}"
+      RESEND_FROM: "${RESEND_FROM}"
+      UNSUBSCRIBE_BASE_URL: "${UNSUBSCRIBE_BASE_URL}"
+      AICC_API_URL: "${AICC_API_URL}"
+    restart: unless-stopped

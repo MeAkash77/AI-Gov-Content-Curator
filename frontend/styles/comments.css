@@ -1,0 +1,412 @@
+:root {
+  --cb-radius: 0.5rem;
+  --cb-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+  --cb-border: 1px solid var(--card-border);
+  --font-inter: "Inter", sans-serif;
+}
+
+/* -------- Section & Header -------- */
+.comments-section {
+  font-family: var(--font-inter), sans-serif;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: var(--cb-border);
+  border-radius: var(--cb-radius);
+  box-shadow: var(--cb-shadow);
+}
+
+.comments-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comments-title {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.comments-subheading {
+  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* filter */
+.filter-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.filter-popover {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--cb-radius);
+  box-shadow: var(--cb-shadow);
+  padding: 0.5rem 0;
+  z-index: 20;
+  min-width: 220px;
+}
+.filter-option {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.filter-option:hover,
+.filter-option.active {
+  background: var(--hover-bg);
+}
+.filter-popover > div:hover {
+  background: var(--hover-bg) !important;
+}
+
+/* -------- New Comment -------- */
+.new-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.new-comment-textarea {
+  width: 100%;
+  min-height: 5rem;
+  padding: 1rem;
+  border: var(--cb-border);
+  border-radius: var(--cb-radius);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+}
+.new-comment-btn {
+  align-self: flex-end;
+}
+
+/* -------- Comment Card -------- */
+.comment {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--card-bg);
+  border: var(--cb-border);
+  border-radius: var(--cb-radius);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.comment:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* meta */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 0.75rem;
+}
+.meta .date {
+  margin-left: auto;
+  font-style: italic;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  fill: var(--accent-color);
+}
+
+/* content */
+.content {
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+/* votes */
+.votes {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.vote-btn {
+  width: 32px;
+  height: 32px;
+  background: var(--hover-bg);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+.vote-btn:hover {
+  transform: scale(1.15);
+  background: var(--accent-color);
+}
+.vote-btn.active {
+  background: var(--accent-color);
+}
+.vote-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-color) !important;
+}
+.score {
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* controls & edit */
+.controls,
+.edit-mode {
+  display: flex;
+  gap: 0.75rem;
+}
+.edit-mode {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.edit-mode .icon-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  background: var(--hover-bg);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+.icon-btn:hover {
+  transform: scale(1.15);
+  background: var(--accent-color);
+}
+.icon-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-color) !important;
+}
+.edit-textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem;
+  border: var(--cb-border);
+  border-radius: var(--cb-radius);
+  background: var(--card-bg);
+  color: var(--text-color);
+  font-family: var(--font-inter), sans-serif;
+  resize: vertical;
+}
+.icon-btn-1 {
+  width: 40px;
+  height: 40px;
+  background: var(--hover-bg);
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+.icon-btn-1:hover {
+  transform: scale(1.15);
+  background: var(--accent-color);
+}
+.icon-btn-1 svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-color) !important;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-inter), sans-serif;
+}
+.page-btn {
+  width: 40px;
+  height: 40px;
+  background: var(--hover-bg);
+  border: var(--cb-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+.page-btn:hover:not(:disabled) {
+  transform: scale(1.15);
+  background: var(--accent-color);
+}
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.page-btn {
+  color: var(--text-color) !important;
+}
+.page-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor !important;
+}
+.page-indicator {
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* mention popup (unchanged) */
+.mention-popup {
+  position: absolute;
+  top: 3.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--cb-radius);
+  box-shadow: var(--cb-shadow);
+  max-height: 8rem;
+  overflow-y: auto;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out;
+}
+.mention-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.mention-popup li {
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.mention-popup li.active,
+.mention-popup li:hover {
+  background: var(--hover-bg) !important;
+}
+
+/* empty + login */
+.comments-empty {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin: 2rem 0;
+}
+.login-prompt {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.login-prompt a {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* overlay */
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.confirm-dialog {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--cb-radius);
+  box-shadow: var(--cb-shadow);
+  text-align: center;
+}
+.confirm-dialog p {
+  margin-bottom: 1rem;
+}
+.confirm-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.confirm-actions .btn,
+.confirm-actions .btn-primary {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 0;
+  min-width: 0;
+}
+.confirm-actions .btn-primary {
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.icon-btn:hover svg,
+.icon-btn.active svg,
+.vote-btn:hover svg,
+.vote-btn.active svg,
+.page-btn:hover svg,
+.page-btn:active svg,
+.filter-btn:hover svg,
+.filter-btn:active svg {
+  fill: white !important;
+  color: white !important;
+}
+.icon-btn-1:hover svg,
+.icon-btn-1.active svg {
+  fill: white !important;
+  color: white !important;
+}

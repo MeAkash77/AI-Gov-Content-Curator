@@ -1,0 +1,45 @@
+/* ---------- Color Variables ---------- */
+/* Default (light) theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #121212;
+  --card-bg: #f7f7f7;
+  --card-border: #e0e0e0;
+  --navbar-bg: #fefefe;
+  --navbar-text: #333333;
+  --footer-bg: #f5f5f5;
+  --footer-text: #555555;
+  --accent-color: #0066cc;
+  --loading-text: #777;
+  --no-result-text: #999;
+  --hover-bg: #f0f0f0;
+  --toastify-text: #333333;
+  --navbar-height: 62px;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #eeeeee;
+  --card-bg: #1d1d1d;
+  --card-border: #333333;
+  --navbar-bg: #1a1a1a;
+  --navbar-text: #ffffff;
+  --footer-bg: #222222;
+  --footer-text: #aaaaaa;
+  --accent-color: #45a1ff;
+  --loading-text: #aaa;
+  --no-result-text: #ccc;
+  --hover-bg: #2a2a2a;
+  --toastify-text: #cdcdcd;
+}
+
+/* ---------- Global Styles ---------- */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
