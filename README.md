@@ -11,20 +11,7 @@ This monorepo, multi-services project is organized into four main components:
 - **Frontend:** Offers an intuitive Next.js-based user interface for government staff (and potentially the public) to browse and view article details.
 - **Newsletter:** Sends daily updates to subscribers with the latest articles.
 
-<p align="center">
-  <img src="frontend/img/logo.png" alt="AI-Powered Article Content Curator Logo" width="30%">
-</p>
-
 **High-Level Architecture:** Each component is maintained in its own directory:
-
-- **Backend:** `backend/`
-  - Live: [https://ai-content-curator-backend.vercel.app/](https://ai-content-curator-backend.vercel.app/)
-- **Frontend:** `frontend/`
-  - Live: [https://synthoraai.vercel.app/](https://synthoraai.vercel.app/)
-- **Crawler:** `crawler/`
-  - Live: [https://ai-content-curator-crawler.vercel.app/](https://ai-content-curator-crawler.vercel.app/)
-- **Newsletter:** `newsletters/`
-  - Live: [https://ai-content-curator-newsletters.vercel.app/](https://ai-content-curator-newsletters.vercel.app/)
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-268?style=flat&logo=express&logoColor=white)
