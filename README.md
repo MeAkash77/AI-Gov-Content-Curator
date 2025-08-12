@@ -1,9 +1,9 @@
-# SynthoraAI - AI-Powered Article Content Curator
+# NewsAI - AI-Powered Article Content Curator
 
 > [!TIP]
-> **SynthoraAI - Synthesizing the world’s news & information through AI.**
+> **NewsAI - Synthesizing the world’s news & information through AI.**
 
-The **SynthoraAI - AI-Powered Article Content Curator** is a comprehensive, AI-powered system designed to aggregate, summarize, and present curated government-related articles.
+The **NewsAI - AI-Powered Article Content Curator** is a comprehensive, AI-powered system designed to aggregate, summarize, and present curated government-related articles.
 This monorepo, multi-services project is organized into four main components:
 
 - **Backend:** Provides a robust RESTful API to store and serve curated articles.
@@ -108,7 +108,7 @@ This monorepo, multi-services project is organized into four main components:
 
 ## Overview
 
-The **SynthoraAI - AI-Powered Article Content Curator** system is designed to provide government staff with up-to-date, summarized content from trusted government sources and reputable news outlets. By leveraging AI (Google Generative AI / Gemini) for summarization and using modern web technologies, this solution ensures that users receive concise, accurate, and timely information.
+The **NewsAI - AI-Powered Article Content Curator** system is designed to provide government staff with up-to-date, summarized content from trusted government sources and reputable news outlets. By leveraging AI (Google Generative AI / Gemini) for summarization and using modern web technologies, this solution ensures that users receive concise, accurate, and timely information.
 
 - **Data Ingestion:**  
   The system aggregates article URLs from multiple sources (government homepages and public APIs like NewsAPI) using a decoupled crawler service.
@@ -198,24 +198,23 @@ This project consists of 4 primary microservices that interact with each other:
    - Uses Axios and Cheerio for static HTML parsing, with Puppeteer as a fallback for dynamic content.
    - Scheduled to run daily at 6:00 AM UTC via a serverless function on Vercel.
    - Provides a basic landing page with information about the crawler and links to the backend and frontend.
-   - **_Deployed on Vercel at [https://ai-content-curator-crawler.vercel.app](https://ai-content-curator-crawler.vercel.app)._**
+     
 2. **Backend:**
    - Built with Express.js and Next.js, serving as a RESTful API for the frontend.
    - Integrates Google Generative AI (Gemini) for content summarization.
    - Stores articles in MongoDB using Mongoose, with fields for URL, title, full content, summary, source information, and fetch timestamp.
    - Scheduled serverless function to fetch and process new articles daily at 6:00 AM UTC.
-   - **_Deployed on Vercel at [https://ai-content-curator-backend.vercel.app](https://ai-content-curator-backend.vercel.app)._**
+
 3. **Newsletter Service:**
    - Allows users to subscribe to a newsletter for daily updates on the latest articles.
    - Integrated with Resend API for managing subscriptions and sending emails.
    - By default, the newsletter is sent daily at 9:00 AM UTC, from the email address with the `sonnguyenhoang.com` domain.
-   - **_Deployed on Vercel as a serverless function, at [https://ai-content-curator-newsletters.vercel.app](https://ai-content-curator-newsletters.vercel.app)._**
+
 4. **Frontend:**
    - Built with Next.js and React, providing a modern, mobile-responsive UI for browsing and viewing curated articles.
    - Fetches and displays a paginated list of articles from the backend API, with filtering options.
    - Dedicated pages for full article content, AI-generated summaries, source information, and fetched timestamps.
    - User authentication for marking articles as favorites, commenting, discussions, and upvoting/downvoting comments.
-   - **_Deployed on Vercel at [https://synthoraai.vercel.app/](https://synthoraai.vercel.app/)._**
 
 This monorepo, microservices architecture is designed to be modular and scalable, allowing for easy updates and maintenance. Each component can be developed, tested, and deployed independently, ensuring a smooth development workflow.
 
@@ -257,11 +256,6 @@ Also, Jira provides a comprehensive set of features for managing projects, inclu
 
 **You can view the project board and tasks at [https://ai-content-curator.atlassian.net](https://ai-content-curator.atlassian.net/jira/software/projects/AICC/boards/3?atlOrigin=eyJpIjoiZDM2MDQ4MWUwYTVkNGNhNzkzZmI5YjE2NGZmZjc2ZDAiLCJwIjoiaiJ9).**
 
-> [!IMPORTANT]
-> Login is required to access the board, and you can create an account if you don't have one.
-
-If you need **access** to the project board, please contact me directly at [sonnguyenhoang.com](https://sonnguyenhoang.com) or via email at [hoangson091104@gmail.com](mailto:hoangson091104@gmail.com) for an invitation. I believe that having access to the project board will help you understand the project's progress, tasks, and overall workflow better, and it will also allow you to contribute more effectively to the project.
-
 ### Workflow
 
 The workflow for this project is as follows: As soon as you receive a task (verbally or in writing) or come up with an idea:
@@ -294,7 +288,7 @@ This workflow ensures that tasks are tracked, code is reviewed, and the project 
 ## User Interface
 
 The user interface is built with Next.js and React, providing a modern, mobile-responsive experience.
-Below are some screenshots of the application (some screenshots may be outdated and not reflect the latest UI - visit [https://synthoraai.vercel.app/](https://synthoraai.vercel.app/) for the latest version):
+Below are some screenshots of the application (some screenshots may be outdated and not reflect the latest UI for the latest version):
 
 ### 0. Landing Page
 
@@ -444,7 +438,7 @@ The **Backend** is responsible for storing articles and serving them via RESTful
 2. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/hoangsonww/AI-Gov-Content-Curator.git
+   git clone https://github.com/MeAkash77/AI-Gov-Content-Curator.git
    cd AI-Gov-Content-Curator/backend
    ```
 
@@ -1109,15 +1103,6 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 ---
 
-## Contact
-
-If you have any questions or suggestions, feel free to reach out to the repository maintainer:
-
-- **David Nguyen**
-  - [LinkedIn](https://www.linkedin.com/in/hoangsonw/)
-  - [GitHub](https://github.com/hoangsonww)
-  - [Email](mailto:hoangson091104@gmail.com)
-  - [Website](https://sonnguyenhoang.com/)
 
 I will be happy to assist you with any questions or issues you may have regarding this project.
 
@@ -1128,7 +1113,7 @@ I will be happy to assist you with any questions or issues you may have regardin
 
 ## Conclusion
 
-The **SynthoraAI - AI-Powered Article Content Curator** project brings together a powerful backend, an intelligent crawler,
+The **NewsAI - AI-Powered Article Content Curator** project brings together a powerful backend, an intelligent crawler,
 a newsletter service, and a modern frontend to deliver up-to-date, summarized government-related articles. Leveraging advanced technologies
 like Google Generative AI, Next.js, Express.js, and MongoDB, the system is both scalable and robust. Whether you’re a government staff member
 or a curious public user, this solution provides a streamlined, user-friendly experience to quickly access relevant, summarized content.
